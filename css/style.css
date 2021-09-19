@@ -1,38 +1,83 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* TYPO */
+body{
+    font-family: 'Grey Qo', cursive;
+    background-size: cover;
+}
 
+h1{
+    font-size: 5rem;
+}
+
+/* buttons */
+button{
+    border:none;
+    background-color: inherit;
+    transition: 0.5s;
+}
+button i{
+    font-size: 5rem;
+}
+
+button i:hover{
+    color:lightblue;
+    cursor: pointer;
+}
+button i:active{
+    /* opacity: 0.6; */
+    color: blue;
+
+}
+
+
+/*------------------*/
+
+/* MAIN */
 #root{
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around; 
+}
+
+.container{
+    display: flex;
     justify-content: space-around;
-    align-items: center;
+    width: 100%;
+}
+
+.carousel{
+    width: 1100px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid blue;
+    box-shadow: -15px -25px 10px lightblue;
     
 }
 
-#root button{
-    border:none;
-    background-color: inherit;
-}
-
-#root button i{
-    font-size: 5rem;
-}
-#root button i:active{
-    /* opacity: 0.6; */
-    color: blue;
-}
-.container{
-    width: 60%;
-    /* margin:auto; */
-    /* display: inline-block; */
-    /* height: 800px; */
-    /* border: 1px solid red; */
-}
-
-.container img{
+.carousel img{
     width: 100%;
-    border-radius: 20px;
+    max-width: 1100px;
+    max-height: 600px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmarks i{
+    margin: 0px 3px;
+}
+
+.active{
+    color: blue;
 }
