@@ -17,16 +17,16 @@
             <h1>{{title}}</h1>
 
             <div class="container">
-                <button><i class="fas fa-chevron-circle-left" @click='prevImg'></i></button>
+                <button><i class="fas fa-chevron-circle-left" @click='prevImg()'></i></button>
                 <div class="carousel">
                     <img :src="images[counter].imgSrc" alt="">
                 </div>
-                <button><i class="fas fa-chevron-circle-right" @click='nextImg'></i></button>
+                <button><i class="fas fa-chevron-circle-right" @click='nextImg()'></i></button>
             </div>
 
             <div class="navigation">
                 <div class="bookmarks">
-                    <i class="fas fa-circle" v-for='(img, index) in images' @click='bookmark(index)' :class="(counter == index) ? 'active' : null" ></i>
+                    <i class="fa-circle" v-for='(img, index) in images' @click='bookmark(index)' :class="(counter == index) ? 'far' : 'fas'" ></i> 
                 </div>
             </div>
 
