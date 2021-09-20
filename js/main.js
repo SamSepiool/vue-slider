@@ -51,8 +51,13 @@ const app = new Vue ({
 
         bookmark: function(index){
             this.counter = index;
-        }
+        },
+
 
     },
+
+    mounted: function() {
+        autoPlay = setInterval(() => this.nextImg(), 3000)
+    }
 
 })
